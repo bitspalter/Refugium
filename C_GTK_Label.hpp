@@ -1,0 +1,54 @@
+//////////////////////////////////////////////////////////////////////////////////
+// [ GTK_Label_Class_Header ]
+//////////////////////////////////////////////////////////////////////////////////
+//
+// LABEL
+//
+// [::Last modi: 26.10.16 L.ey (µ~)::]
+//
+//
+#ifndef _C_GTK_LABEL_H_
+ #define _C_GTK_LABEL_H_
+ 
+ #include <gtk/gtk.h>
+ 
+//////////////////////////////////////////////////////////////////////////////////
+// CONSTANT
+//////////////////////////////////////////////////////////////////////////////////
+ 
+ const int C_GTK_LABEL_ERROR = 0x00;
+ const int C_GTK_LABEL_READY = 0x01;
+ 
+//////////////////////////////////////////////////////////////////////////////////
+// STRUCT
+//////////////////////////////////////////////////////////////////////////////////
+ 
+ class C_GTK_Label {
+   
+     public:
+
+        C_GTK_Label();
+       ~C_GTK_Label();
+       
+        GtkWidget* create(const gchar *title);
+
+	int setText(const gchar *title);
+	int setSize(int x, int y);
+	int setAlignment(float x, float y);
+	int setBackground(const GdkRGBA *color);
+	int setColor(const GdkRGBA *color);
+	int setFont(const char* pFont);
+	
+	GtkWidget* getLabel();
+	
+	int hide();
+	int show();
+       
+     private:
+       
+        GtkWidget* plabel;
+	 
+	int status;
+ };
+
+#endif // _C_GTK_LABEL_H_

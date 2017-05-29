@@ -1,0 +1,45 @@
+//////////////////////////////////////////////////////////////////////////////////
+// [ GTK_FileChooser_Class_Header ]
+//////////////////////////////////////////////////////////////////////////////////
+//
+// FILECHOOSER
+//
+// [::Last modi: 22.11.16 L.ey (µ~)::]
+//
+//
+#ifndef _C_GTK_FILECHOOSER_H_
+ #define _C_GTK_FILECHOOSER_H_
+ 
+   #include <string>
+   #include <gtk/gtk.h>
+   
+   using namespace std;
+   
+//////////////////////////////////////////////////////////////////////////////////
+// CONSTANT
+//////////////////////////////////////////////////////////////////////////////////
+ 
+   const int C_GTK_FILECHOOSER_ERROR = 0x00;
+   const int C_GTK_FILECHOOSER_READY = 0x01;
+ 
+//////////////////////////////////////////////////////////////////////////////////
+// STRUCT
+//////////////////////////////////////////////////////////////////////////////////
+ 
+ class C_GTK_FileChooser {
+   
+     public:
+
+        C_GTK_FileChooser();
+       ~C_GTK_FileChooser();
+       
+        int getFolder(const char* pCaption, GtkWindow* pParent, string* pFolder);
+        
+	int getFile(const char* pCaption, GtkWindow* pParent, string* pFile);
+        int setFile(const char* pCaption, GtkWindow* pParent, string* pFile);
+	
+     private:
+
+ };
+
+#endif // _C_GTK_FILECHOOSER_H_
