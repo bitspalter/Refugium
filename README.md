@@ -2,7 +2,7 @@
 
 encrypt|decrypt files|folder with aes
 
-1.compile:g++ *.cpp -w -o gui `pkg-config --cflags --libs gtk+-3.0` -lpthread
+1.compile:g++ *.cpp -w -o refugium no-pie -Wall \`pkg-config --cflags --libs gtk+-3.0\` -lpthread
 
 
 ![alt tag](https://github.com/bitspalter/Refugium/blob/master/Refugium1.png "Refugium1")
